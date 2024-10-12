@@ -5,5 +5,7 @@ public class Main {
         System.out.println(a);
         int wynik=a/2;
         System.out.println(wynik);
+        System.out.println(a++);
+        System.out.println(++a);
     }
 }

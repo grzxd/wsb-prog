@@ -7,5 +7,11 @@ public class Main {
         System.out.println(wynik);
         System.out.println(a++);
         System.out.println(++a);
+        boolean b1 = true;
+        boolean b2 = false;
+        System.out.println(b1);
+        System.out.println(b2);
+        System.out.println(b1 || b2);
+        System.out.println(b1 && b2);
     }
 }

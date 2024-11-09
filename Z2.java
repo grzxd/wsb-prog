@@ -34,9 +34,7 @@ public class Z2 {
         try {
             Scanner scanner = new Scanner(System.in);
             System.out.println(message);
-            int input = scanner.nextInt();
-            scanner.close();
-            return input;
+            return scanner.nextInt();
         } catch (InputMismatchException e) {
             System.out.println("Niepoprawny typ danych!");
             return input(message);

@@ -8,7 +8,7 @@ public class Z4 {
         char operation;
 
         number1 = input("Podaj pierwszą liczbę: ");
-        operation = cinput("Podaj operację");
+        operation = charinput("Podaj operację");
         number2 = input("Podaj drugą liczbę:");
         System.out.println("------------");
 
@@ -47,7 +47,7 @@ public class Z4 {
         }
     }
 
-    static char cinput(String message) {
+    static char charinput(String message) {
         try {
             Scanner scanner = new Scanner(System.in);
             System.out.println(message);
@@ -56,7 +56,7 @@ public class Z4 {
             return input;
         } catch (InputMismatchException e) {
             System.out.println("Niepoprawny typ danych!");
-            return cinput(message);
+            return charinput(message);
         }
     }
 }

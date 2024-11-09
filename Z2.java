@@ -1,47 +1,45 @@
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Z2 {
     public static void main(String[] args) {
-        boolean todo=true;
-        int l1 = 0, l2 = 0, l3 = 0, max=0, min=0;
+        int l1, l2, l3, max, min;
 
-        System.out.println("Podaj 3 liczby całkowite");
-        while (todo) {
-            try {
-                Scanner input = new Scanner(System.in);
-                l1 = input.nextInt();
-                l2 = input.nextInt();
-                l3 = input.nextInt();
-                input.close();
-
-                todo=false;
-            } catch (Exception e) {
-                System.out.println("Należy podać liczby całkowite");
-            }
-        }
+        String mess = "Podaj liczbę całkowitą";
+        l1 = input(mess);
+        l2 = input(mess);
+        l3 = input(mess);
 
         if (l1 > l2 && l1 > l3) {
             max = l1;
-        }
-        if (l2 > l1 && l2 > l3) {
+        } else if (l2 > l1 && l2 > l3) {
             max = l2;
-        }
-        if (l3 > l1 && l3 > l2) {
+        } else {
             max = l3;
         }
 
         if (l1<l2 && l1<l3) {
             min = l1;
-        }
-        if (l2<l1 && l2<l3) {
+        } else if (l2<l1 && l2<l3) {
             min = l2;
-        }
-        if (l3<l1 && l3<l2) {
+        } else {
             min = l3;
         }
 
-
         System.out.println("Największą liczbą jest " + max);
         System.out.println("Najmniejszą liczbą jest " + min);
+    }
+
+    static int input(String message) {
+        try {
+            Scanner scanner = new Scanner(System.in);
+            System.out.println(message);
+            int input = scanner.nextInt();
+            scanner.close();
+            return input;
+        } catch (InputMismatchException e) {
+            System.out.println("Niepoprawny typ danych!");
+            return input(message);
+        }
     }
 }

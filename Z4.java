@@ -1,3 +1,4 @@
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Z4 {
@@ -6,14 +7,9 @@ public class Z4 {
         double number1, number2;
         char operation;
 
-        Scanner input = new Scanner(System.in);
-
-        System.out.print("Podaj pierwszą liczbę: ");
-        number1 = input.nextDouble();
-        System.out.println("Podaj operację:");
-        operation = input.next().charAt(0);
-        System.out.println("Podaj drugą liczbę:");
-        number2 = input.nextDouble();
+        number1 = input("Podaj pierwszą liczbę: ");
+        operation = cinput("Podaj operację");
+        number2 = input("Podaj drugą liczbę:");
         System.out.println("------------");
 
         switch (operation) {
@@ -35,6 +31,32 @@ public class Z4 {
                 break;
             default:
                 System.out.println("Podano błędną operację");
+        }
+    }
+
+    static int input(String message) {
+        try {
+            Scanner scanner = new Scanner(System.in);
+            System.out.println(message);
+            int input = scanner.nextInt();
+            scanner.close();
+            return input;
+        } catch (InputMismatchException e) {
+            System.out.println("Niepoprawny typ danych!");
+            return input(message);
+        }
+    }
+
+    static char cinput(String message) {
+        try {
+            Scanner scanner = new Scanner(System.in);
+            System.out.println(message);
+            char input = scanner.next().charAt(0);
+            scanner.close();
+            return input;
+        } catch (InputMismatchException e) {
+            System.out.println("Niepoprawny typ danych!");
+            return cinput(message);
         }
     }
 }

@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Z4 {
     public static void main(String[] args) {
-        //Kalkulator
+        System.out.println("Kalkulator");
         double number1, number2;
         char operation;
 
@@ -10,10 +10,10 @@ public class Z4 {
 
         System.out.print("Podaj pierwszą liczbę: ");
         number1 = input.nextDouble();
-        System.out.println("Podaj drugą liczbę:");
-        number2 = input.nextDouble();
         System.out.println("Podaj operację:");
         operation = input.next().charAt(0);
+        System.out.println("Podaj drugą liczbę:");
+        number2 = input.nextDouble();
         System.out.println("------------");
 
         switch (operation) {

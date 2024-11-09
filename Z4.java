@@ -33,6 +33,8 @@ public class Z4 {
                     System.out.println("Nie można dzielić przez zero");
                 }
                 break;
+            default:
+                System.out.println("Podano błędną operację");
         }
     }
 }

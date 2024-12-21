@@ -1,3 +1,5 @@
+package Playground;
+
 public class Student extends Person {
     private int indexNumber;
 

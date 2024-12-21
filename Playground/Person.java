@@ -1,3 +1,5 @@
+package Playground;
+
 public class Person {
     private int PESEL, age;
     private String name, surname, gender;

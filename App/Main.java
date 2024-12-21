@@ -9,10 +9,11 @@ public class Main {
         List<Employee> employees = company.getEmployees();
         boolean done = false;
 
-        String title = "Panel administracyjny firmy " + company.getName();
-        System.out.println("-".repeat(title.length()));
+        String title = "| Panel administracyjny firmy " + company.getName() + " |";
+        String titleFrame = "+" + "-".repeat(title.length() - 2) + "+";
+        System.out.println(titleFrame);
         System.out.println(title);
-        System.out.println("-".repeat(title.length()));
+        System.out.println(titleFrame);
 
         while (!done) {
             System.out.println();

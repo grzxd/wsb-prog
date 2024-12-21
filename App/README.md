@@ -1,0 +1,1 @@
+**Aplikacja do zarządzania firmą utworzona w ramach zajęć "Języki i paradygmaty programowania"**
